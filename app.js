@@ -132,6 +132,12 @@ topMenuEl.addEventListener("click",(event)=>{
       return;
       } 
       
+      //6.4
+      if(event.target.innerHTML === "about"){
+        mainEl.innerHTML = "<h1>about</h1>"
+      }
+  
+      
       if(event.target.classList.contains("active")){
             event.target.classList.remove("active");
             showingSubMenuvariable = false;
@@ -167,7 +173,7 @@ topMenuEl.addEventListener("click",(event)=>{
             console.log("i worked!") //comment this out later
             showingSubMenuvariable = true
           }
-          else{showingSubMenuvariable = false; console.log(showingSubMenuvariable)}
+          else{showingSubMenuvariable = false;}
         }
       }
       
@@ -186,7 +192,7 @@ topMenuEl.addEventListener("click",(event)=>{
 
       //5.7
 
-      if(showingSubMenuvariable = true){
+      if(showingSubMenuvariable === true){
       
         buildSubMenu(currentEventLinkObj)
         subMenuEl.style.top = "100%"} 
@@ -215,9 +221,12 @@ topMenuEl.addEventListener("click",(event)=>{
     const h1 = document.querySelector("main h1")
     h1.innerText = event.target.innerHTML
 
-    //6.4
-    if(event.target.innerText === "ABOUT"){
-      mainEl.innerHTML = "<h1>about</h1>"
-    }
+    // //6.4
+    // if(event.target.innerText === "about"){
+    //   mainEl.innerHTML = "<h1>about</h1>"
+    // }
 
   })
+
+
+
